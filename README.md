@@ -18,6 +18,10 @@ Add a second GET route to "/echo/:id". This route should send the id back to the
     id: "dog"
 }
 
+Notes: In Express.js, when you define a route with a parameter using a colon (:) prefix, such as /echo/:id, the value specified in the URL for that parameter can be accessed through the req.params object.
+
+In this case, req.params.id retrieves the value of the id parameter from the URL. For example, if the client makes a request to /echo/dog, req.params.id will be set to "dog"
+
 3. POST request
 Create a POST route to "/sum". This route takes an array of numbers from the "numbers" property of the request body, and sums them and sends them back to the client.
 
