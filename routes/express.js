@@ -3,7 +3,7 @@ const path = require('path')
 const app = express()
 const port = 3000
 
-const Id = require('./id_echoing');
+const Id = require('./api/id_echoing');
 
 app.get('/hello', (req, res) => {
         const message = { msg: 'Hello World!' };
@@ -17,12 +17,12 @@ app.get(`/echo/:id`, (req, res) => {
   res.end(JSON.stringify(new Id(id)));
 })
 
-// app.post('/sum', (req, res) => {
-//   console.log(req.body);
-//   //const {numbers} = req.body;
-//   // res.writeHead(200, { 'Content-Type': 'application/json' });
-//    res.send(req.body);
-// })
+app.post('/sum', (req, res) => {
+  console.log(req.body);
+  //const {numbers} = req.body;
+  // res.writeHead(200, { 'Content-Type': 'application/json' });
+   res.json(req.body);
+})
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`)
