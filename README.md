@@ -67,6 +67,8 @@ Example respond:
     list: ["foo", "bar"]
 }
 
+Notes: $nodemon --ignore 'data/*' index.js (so that nodemon ignores everything inside the folder data)
+
 Useful documents and links:
 Postman
 Express hello world example
