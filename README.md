@@ -1,8 +1,11 @@
 # Node.js_Express
+
 Node.js and express exercises/practice
 
 # My first express server
+
 Requirements:
+
 1. Hello world route
 Create a node.js server to port 3000 that you can start with "npm start" command (use npm init for example) and install express.js framework. Create a GET route to "/hello" that sends the following JSON object back to the client:
 
@@ -37,7 +40,7 @@ example response:
 }
 
 4. Static folder
-Let's make the server able to serve an actual website. Create a static folder and add index.html file to it. This file should contain a <h1> tag with the text "Hello world" inside. The HTML file should be accessible from http://localhost:3000/
+Let's make the server able to serve an actual website. Create a static folder and add index.html file to it. This file should contain a <h1> tag with the text "Hello world" inside. The HTML file should be accessible from <http://localhost:3000/>
 
 5. Front-end and back-end communication
 Add an input field (textarea or input tag) with an id of input-text and a button with an id of submit-data to index.html. When pressing the button, the website should send the contents of the input field in a JSON object to the POST route "/list". The backend should save the text to a list and respond with the list of words.
