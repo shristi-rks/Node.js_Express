@@ -29,9 +29,12 @@ function initializeCode() {
             body: JSON.stringify(request)
         })
             .then(response => response.json())
-            .then(request => {
-                console.log(request.list);
-            })
+            .then(data => {
+                                // Update the frontend list with the text
+                                const newText = request.text;
+                                    addNewText(newText);
+                                    console.log(data);
+        })
             .catch(error => {
                 console.error(error);
             });
@@ -39,10 +42,8 @@ function initializeCode() {
 }
 
 function addNewText(text) {
-    const theWall = document.getElementById("the-wall");
+    const theWall = document.getElementById("lists");
     let newListItem = document.createElement("li");
-
-    newListItem.classList.add("col", "s6", "m4", "l3");
 
     newListItem.appendChild(document.createTextNode(text));
 
